@@ -1,0 +1,127 @@
+/* Base styles */
+body {
+    font-size: 16px;
+    color: rgb(33, 37, 41);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
+        "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Search Box */
+.search-container {
+    position: relative;
+    margin-bottom: 20px;
+    width: 330px;
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(206, 212, 218);
+    padding: 6px 12px;
+    border-radius: 4px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.shortCut {
+    Font-size: 12px;
+    border: 1px solid;
+    Border-color: rgb(222, 226, 230);
+    Border-radius: 2px;
+    Height: 24px;
+    Padding: 0px 4px;
+}
+
+#search {
+    width: 241px;
+    height: 38px;
+    font-size: 16px;
+    border-color: transparent;
+}
+#search:focus-visible {
+    outline: none;
+}
+.search-container:focus-within {
+    border: 1px solid #7952b3 ;
+    box-shadow: 0 0 0 3px rgb(121 82 179 / 25%);
+}
+.search-container:has(#search:disabled) {
+    background-color: rgb(233, 236, 239);
+}
+
+/* Table */
+.results-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.results-table th,
+.results-table td {
+    padding: 8px;
+    border: 1px solid rgb(222, 226, 230);
+    text-align: center;
+}
+
+.results-table th {
+    font-weight: 700;
+}
+
+/* Pagination and Results Limit */
+.pagination-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pagination button {
+    padding: 5px 10px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.results-limit label {
+    margin-right: 10px;
+}
+
+#results-count {
+    padding: 5px;
+    width: 50px;
+}
+.countrySlot{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.countrySlot img{
+    margin-right: 10px;
+}
+.erroeMessage{
+    color: red;
+}
+/* Responsive design */
+@media (max-width: 300px) {
+    .container {
+        padding: 10px;
+    }
+
+    #search {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .pagination-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .pagination {
+        margin-bottom: 10px;
+    }
+}
