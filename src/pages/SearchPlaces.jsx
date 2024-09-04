@@ -5,7 +5,8 @@ function SearchPlaces() {
   const [searchTerm, setSearchTerm] = useState(null);
   const [places, setPlaces] = useState([])
   const [filterdPlaces, setFilteredPlaces] = useState([])
-  const [pages, setPages] = useState(5)
+  const [filterdAllPlaces, setFilteredAllPlaces] = useState([])
+  const [pages, setPages] = useState(10)
   const [curentPage, setCurrentPage] = useState(0)
   const [totalPage, setTotalPage] = useState(0)
   const [totalPlaces, setTotalPlaces] = useState(0)
@@ -71,6 +72,7 @@ function SearchPlaces() {
     }
   }
   console.log(loader, 'LOADER')
+
   useEffect(() => {
     if (pages) {
       getPlaces()
